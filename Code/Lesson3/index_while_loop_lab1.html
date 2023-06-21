@@ -10,13 +10,13 @@
     <script>
 
       function repeatString(string, numRepeat, join_character){
-        let ans = "";
+        let ans = "";  
+        let index = 1;
         
-        for (let i=1; i<=numRepeat; i++){
-          //console.log(i, ans)
-          if (i >1) ans = ans + join_character;
-          ans += string
-          //console.log("----",i, ans)
+        while (index <= numRepeat){
+          if (index > 1) ans = ans + join_character;
+          ans += string;
+          index = index +1;
         }
 
         return ans;
