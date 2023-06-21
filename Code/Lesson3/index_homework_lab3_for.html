@@ -15,8 +15,13 @@
           sum += i
         return sum;
       }
+
       function calculateSum_2(startNum, endNum){
         return (endNum-startNum+1)*(startNum+endNum)/2;
+        
+        // 2, 4, 6 ,8, 10 
+        // ssh = (10 - 2) / 2 + 1 = 5 
+        // sum = (10 + 2) * ssh / 2 = 30
       }
       
       console.log(calculateSum(0, 100));
