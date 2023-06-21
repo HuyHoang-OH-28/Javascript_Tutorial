@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen">
+    <h1> Hello world !</h1>
+    <script>
+
+      function calculateSum(startNum, endNum){
+        let sum = 0;  
+        for (let i= startNum; i<= endNum; i++)
+          sum += i
+        return sum;
+      }
+      function calculateSum_2(startNum, endNum){
+        return (endNum-startNum+1)*(startNum+endNum)/2;
+      }
+      
+      console.log(calculateSum(0, 100));
+      console.log(calculateSum_2(0, 100));
+
+
+    </script>
+</body>
+</html>
