@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen" style="margin-left: 100px;">
+    <h1> Hello world !</h1>
+    <script>
+        // Homeworks 1.4 : Kiem tra c = a + b khong?
+        function is_eval_sum(a,b,c) {
+            return (a === b + c) ? true : false // Ternary Operator
+        }
+        console.log(is_eval_sum(10,3,7));
+
+        // Homeworks 1.6 : Kiem tra so chia het cho 3, 5
+        function is_divisible_3_5(num) {
+            return (num %15 === 0) ? true : false // Ternary Operator
+        }
+        console.log(21, is_divisible_3_5(21));
+        console.log(30, is_divisible_3_5(30));
+
+        // HomeWorks 5.1 : Tim gia tri lon nhat cua 1 mang
+        maxArr= (arr) => {return Math.max(...arr)}
+        console.log(maxArr([1,4,5,3,5]))
+        
+        // HomeWorks 5.2 : Tim gia tri nho nhat cua 1 mang
+        minArr= (arr) => {return Math.min(...arr)}
+        console.log(minArr([1,4,5,3,5]))
+
+        // HomeWorks 5.3 : Tao mang moi với các số là số dư tương ứng khi chia mảng cũ cho 2
+        createNewArr = (arr) => { return arr.map(x => x % 2) }
+        console.log(createNewArr([1,4,5,3,5]))
+
+        // HomeWorks 5.4 : RepeatString
+        repeatString =(string, numRepeat, joinChar) => { return Array(numRepeat).fill(string).join(joinChar)}
+        console.log(repeatString("abc", 3, "-"));
+
+        // HomeWorks 6.1 : Sort descending
+        reverseSort = (arr) => {return arr.sort().reverse()};
+        console.log(reverseSort([5,4,1,2,4]))
+        
+        // HomeWorks 6.2 : Random element
+        shuffleArray = (arr) => {
+            let new_arr = []
+            while (arr.length > 0) new_arr.push(...arr.splice(Math.floor(Math.random() * (arr.length-1)), 1))
+            return new_arr
+        }
+        console.log(shuffleArray([5,4,1,2,4]))
+
+        // HomeWorks 6.3 : Lấy phần tử ko xuất hiện ở cả 2 mảng. 
+        symmetricDifference = (arr1, arr2) => { return arr2.filter(x => !arr1.includes(x)).concat(arr1.filter(x => !arr2.includes(x)))}
+        console.log(symmetricDifference([1, 7, 3], [1, 2, 4])) 
+
+        // HomeWorks 6.4 : Lấy phần tử xuất hiện ở cả 2 mảng. 
+        getCommonElements = (arr1, arr2) => { return arr2.filter(x => arr1.includes(x)) } 
+        console.log(getCommonElements([1, 7, 3], [1, 2, 4]))
+
+    </script>
+</body>
+</html>
